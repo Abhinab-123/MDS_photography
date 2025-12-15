@@ -1,35 +1,74 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Star } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const packages = [
   {
-    name: "Standard",
-    price: "Start",
-    features: ["1 Hour Session", "10 Retouched Photos", "Online Gallery", "Print Release"],
+    name: "Silver Package",
+    price: "₹50,000",
+    subtitle: "Essential Package",
+    features: [
+      "1 Traditional photo and video shoot",
+      "2 Days photo and video shoot",
+      "20 Page wedding photo book (Premium quality)",
+      "Wedding Invitation Included",
+      "2 Hour video output"
+    ],
+    note: "*Consultant available for extra day shoot",
+    color: "text-gray-500",
+    borderColor: "border-gray-200",
+    btnColor: "bg-gray-900",
+    highlight: false
   },
   {
-    name: "Premium",
-    price: "Pro",
-    features: ["3 Hour Session", "30 Retouched Photos", "2 Locations", "Photo Album", "4K Video Highlight"],
-    highlight: true,
+    name: "Gold Package",
+    price: "₹1,00,000",
+    subtitle: "Premium Choice",
+    features: [
+      "1 Videograph (Traditional and Cinematic)",
+      "1 Candid photoshoot",
+      "2 Days traditional photoshoot",
+      "30 Page wedding photo book (Premium quality)",
+      "Wedding Invitation Included",
+      "1 LED and Drone for Reception"
+    ],
+    note: "*Consultant available for extra day shoot",
+    color: "text-yellow-600",
+    borderColor: "border-yellow-400",
+    btnColor: "bg-yellow-600",
+    highlight: true
   },
   {
-    name: "Event",
-    price: "Full",
-    features: ["Full Day Coverage", "Unlimited Photos", "Second Shooter", "Drone Footage", "Same Day Edit"],
+    name: "Diamond Package",
+    price: "₹1,50,000",
+    subtitle: "Luxury Package",
+    features: [
+      "2 Days cinematic video shoot",
+      "2 Days shoot",
+      "50 Page photo book + Mini photo book + Calendar",
+      "Wedding Invitation Included",
+      "2 LED and Drone for Reception and Wedding",
+      "Treasure + Highlight"
+    ],
+    note: "*Consultant available for extra day shoot",
+    color: "text-cyan-600",
+    borderColor: "border-cyan-400",
+    btnColor: "bg-cyan-600",
+    highlight: false
   },
 ];
 
 export default function Packages() {
   return (
-    <section id="packages" className="py-24 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <div className="mb-16">
+    <section id="packages" className="py-24 bg-white">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="mb-12 text-center md:text-left">
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">Packages</h2>
-          <div className="h-1 w-20 bg-black" />
+          <div className="h-1 w-20 bg-black mx-auto md:mx-0" />
+          <p className="mt-4 text-gray-500">Choose the perfect collection for your special moments.</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {packages.map((pkg, idx) => (
             <motion.div
               key={pkg.name}
@@ -38,34 +77,43 @@ export default function Packages() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
               className={cn(
-                "p-8 border flex flex-col h-full bg-white transition-shadow hover:shadow-xl",
-                pkg.highlight ? "border-black shadow-lg relative" : "border-gray-200"
+                "relative p-6 md:p-8 border-2 rounded-2xl flex flex-col h-full bg-white transition-all duration-300",
+                pkg.highlight ? "shadow-2xl scale-100 md:scale-105 z-10 border-yellow-400" : "border-gray-100 hover:border-gray-300 shadow-lg"
               )}
             >
               {pkg.highlight && (
-                <span className="absolute -top-3 left-8 bg-black text-white text-xs px-3 py-1 uppercase tracking-wider font-medium">
-                  Popular
-                </span>
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-md flex items-center gap-1">
+                  <Star className="w-3 h-3 fill-current" /> Most Popular
+                </div>
               )}
-              <h3 className="text-2xl font-heading font-bold mb-2">{pkg.name}</h3>
-              <div className="text-gray-500 font-medium mb-8 text-sm uppercase tracking-wider">{pkg.price}</div>
               
-              <ul className="space-y-4 mb-8 flex-1">
-                {pkg.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm text-gray-600">
-                    <Check className="w-4 h-4 mt-0.5 text-black" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-heading font-bold mb-2">{pkg.name}</h3>
+                <div className={cn("text-4xl md:text-5xl font-bold mb-2 tracking-tight", pkg.color)}>
+                  {pkg.price}
+                </div>
+                <p className="text-gray-400 font-medium uppercase tracking-widest text-xs">{pkg.subtitle}</p>
+              </div>
+              
+              <div className="flex-1 mb-8">
+                <ul className="space-y-4">
+                  {pkg.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm md:text-base text-gray-600 leading-relaxed">
+                      <div className={cn("mt-1 p-0.5 rounded-full flex-shrink-0", pkg.color.replace('text-', 'bg-').replace('600', '100'))}>
+                        <Check className={cn("w-3 h-3", pkg.color)} strokeWidth={3} />
+                      </div>
+                      <span className="flex-1">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-6 text-xs text-gray-400 italic text-center">{pkg.note}</p>
+              </div>
 
               <button className={cn(
-                "w-full py-3 text-sm font-bold uppercase tracking-widest transition-colors",
-                pkg.highlight 
-                  ? "bg-black text-white hover:bg-gray-800" 
-                  : "bg-white text-black border border-black hover:bg-gray-50"
+                "w-full py-4 rounded-xl text-white font-bold uppercase tracking-widest text-sm transition-transform hover:scale-[1.02] active:scale-[0.98] shadow-md",
+                pkg.btnColor
               )}>
-                Select Plan
+                Book {pkg.name.split(' ')[0]}
               </button>
             </motion.div>
           ))}
@@ -74,6 +122,3 @@ export default function Packages() {
     </section>
   );
 }
-
-// Helper for conditional classes
-import { cn } from "@/lib/utils";
