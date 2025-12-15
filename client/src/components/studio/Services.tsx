@@ -1,56 +1,95 @@
 import { motion } from "framer-motion";
-import { Camera, Video, Edit, Image, Film, Users, Heart, Share2 } from "lucide-react";
+import { Camera, Film, Calendar, Check, ArrowRight } from "lucide-react";
 
 const services = [
-  { name: "Wedding Photography", icon: Heart, color: "bg-pink-100 text-pink-600" },
-  { name: "Pre-Wedding Shoots", icon: Image, color: "bg-purple-100 text-purple-600" },
-  { name: "Event Coverage", icon: Users, color: "bg-blue-100 text-blue-600" },
-  { name: "Portraiture", icon: Camera, color: "bg-orange-100 text-orange-600" },
-  { name: "Commercial", icon: Share2, color: "bg-green-100 text-green-600" },
-  { name: "Cinematography", icon: Film, color: "bg-red-100 text-red-600" },
-  { name: "Photo Editing", icon: Edit, color: "bg-indigo-100 text-indigo-600" },
-  { name: "Drone Shots", icon: Video, color: "bg-cyan-100 text-cyan-600" },
+  {
+    icon: Camera,
+    title: "Luxury Wedding Photography",
+    description: "Timeless wedding photography that captures the essence of your love story with artistic elegance.",
+    features: [
+      "Pre-wedding consultation",
+      "Full day coverage",
+      "Professional editing",
+      "Online gallery",
+      "Print package"
+    ]
+  },
+  {
+    icon: Film,
+    title: "Cinematic Videography",
+    description: "Cinematic wedding films that transform your special day into a breathtaking visual narrative.",
+    features: [
+      "4K video production",
+      "Drone coverage",
+      "Same-day highlights",
+      "Full ceremony recording",
+      "Custom music"
+    ]
+  },
+  {
+    icon: Calendar,
+    title: "Event Management",
+    description: "End-to-end wedding planning and coordination for a seamless and stress-free celebration.",
+    features: [
+      "Vendor coordination",
+      "Timeline management",
+      "Venue decoration",
+      "Guest management",
+      "Day-of coordination"
+    ]
+  }
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-gray-900 text-white relative overflow-hidden">
-      {/* Background gradients */}
-      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-purple-900/30 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-blue-900/30 blur-[120px] rounded-full pointer-events-none" />
+    <section id="services" className="py-24 bg-stone-50 text-stone-900">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="text-center mb-16">
+          <span className="text-amber-600 font-bold tracking-widest uppercase text-sm mb-3 block">Our Expertise</span>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-stone-900 mb-6">
+            Services We Offer
+          </h2>
+          <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full" />
+        </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid md:grid-cols-2 gap-16 items-start">
-          <div className="sticky top-24">
-            <span className="text-purple-400 font-bold tracking-widest uppercase text-sm mb-2 block">Our Expertise</span>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-              Services We <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Offer</span>
-            </h2>
-            <p className="text-gray-400 max-w-sm leading-relaxed text-lg mb-8">
-              From intimate portraits to grand celebrations, we provide a comprehensive range of visual solutions tailored to meet professional standards.
-            </p>
-            <button className="px-8 py-3 rounded-full border border-purple-500 text-purple-400 font-bold uppercase tracking-wider hover:bg-purple-500 hover:text-white transition-all">
-              View Portfolio
-            </button>
-          </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {services.map((service, idx) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-stone-100 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-8">
+                <service.icon className="w-7 h-7" strokeWidth={1.5} />
+              </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {services.map((service, idx) => (
-              <motion.div
-                key={service.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05 }}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-6 rounded-2xl hover:bg-gray-800 hover:border-purple-500/50 transition-all duration-300 group cursor-default"
-              >
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${service.color} transition-transform group-hover:scale-110`}>
-                  <service.icon className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold group-hover:text-purple-300 transition-colors">{service.name}</h3>
-              </motion.div>
-            ))}
-          </div>
+              <h3 className="text-2xl font-heading font-bold mb-4 text-stone-900 leading-tight">
+                {service.title}
+              </h3>
+
+              <p className="text-stone-600 leading-relaxed mb-8 text-sm md:text-base">
+                {service.description}
+              </p>
+
+              <div className="flex-1">
+                <ul className="space-y-3 mb-8">
+                  {service.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3 text-sm text-stone-600 font-medium">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <button className="w-full py-4 rounded-xl border border-stone-200 text-stone-900 font-bold uppercase tracking-widest text-xs hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all">
+                Book Consultation
+              </button>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
