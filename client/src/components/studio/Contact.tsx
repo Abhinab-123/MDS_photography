@@ -26,23 +26,23 @@ export default function Contact() {
                 </div>
               </a>
 
-              <a href="tel:+919876543210" className="flex items-center gap-6 p-4 rounded-2xl hover:bg-white hover:shadow-lg transition-all group">
+              <a href="tel:+918917328397" className="flex items-center gap-6 p-4 rounded-2xl hover:bg-white hover:shadow-lg transition-all group">
                 <div className="w-12 h-12 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center group-hover:bg-pink-600 group-hover:text-white transition-colors">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Call Us</h4>
-                  <p className="text-gray-500">+91 98765 43210</p>
+                  <p className="text-gray-500">+91 89173 28397 <br/> +91 94397 48104</p>
                 </div>
               </a>
 
-              <a href="mailto:contact@mdsphotography.com" className="flex items-center gap-6 p-4 rounded-2xl hover:bg-white hover:shadow-lg transition-all group">
+              <a href="mailto:mahalaxmistudio143@gmail.com" className="flex items-center gap-6 p-4 rounded-2xl hover:bg-white hover:shadow-lg transition-all group">
                 <div className="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center group-hover:bg-cyan-600 group-hover:text-white transition-colors">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Email Us</h4>
-                  <p className="text-gray-500">contact@mdsphotography.com</p>
+                  <p className="text-gray-500 break-all">mahalaxmistudio143@gmail.com</p>
                 </div>
               </a>
             </div>

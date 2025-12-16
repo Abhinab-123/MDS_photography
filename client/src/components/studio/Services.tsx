@@ -52,7 +52,7 @@ export default function Services() {
           <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, idx) => (
             <motion.div
               key={service.title}
@@ -60,7 +60,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-stone-100 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-stone-100 flex flex-col hover:shadow-xl transition-all duration-300 w-full max-w-md mx-auto md:max-w-none"
             >
               <div className="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-8">
                 <service.icon className="w-7 h-7" strokeWidth={1.5} />

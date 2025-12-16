@@ -23,15 +23,15 @@ export default function Team() {
             <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-stone-200 shadow-xl">
               <img 
                 src={lituImage} 
-                alt="Litu - Proprietor" 
-                className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                alt="Biswaketan Sahoo - Proprietor" 
+                className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
               />
             </div>
           </div>
           
           <div className="w-full md:w-1/2 text-center md:text-left space-y-8">
             <div>
-              <h3 className="text-4xl font-heading font-bold text-stone-900 mb-2">Litu</h3>
+              <h3 className="text-4xl font-heading font-bold text-stone-900 mb-2">Biswaketan Sahoo</h3>
               <p className="text-amber-600 uppercase tracking-widest text-xs font-bold">Proprietor & Lead Photographer</p>
             </div>
             
@@ -41,7 +41,7 @@ export default function Team() {
 
             <div className="space-y-4 text-stone-500 leading-relaxed text-sm">
               <p>
-                With over a decade of experience in luxury weddings and cinematic storytelling, Litu has established Mahalaxmi Digital Studio as a premier name in visual arts.
+                With over a decade of experience in luxury weddings and cinematic storytelling, Biswaketan has established Mahalaxmi Digital Studio as a premier name in visual arts.
               </p>
             </div>
 

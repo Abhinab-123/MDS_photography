@@ -93,7 +93,7 @@ export default function Packages() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {packages.map((pkg, idx) => (
             <motion.div
               key={pkg.name}
@@ -102,8 +102,9 @@ export default function Packages() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15 }}
               className={cn(
-                "relative flex flex-col h-full rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2",
-                pkg.highlight ? "shadow-2xl ring-4 ring-amber-400/20 scale-100 md:scale-110 z-10" : "shadow-xl border bg-white"
+                "relative flex flex-col rounded-3xl overflow-hidden transition-all duration-300",
+                "w-full max-w-md mx-auto md:max-w-none", // Mobile optimization
+                pkg.highlight ? "shadow-2xl ring-4 ring-amber-400/20 md:scale-110 z-10 my-4 md:my-0" : "shadow-xl border bg-white my-4 md:my-0"
               )}
             >
               {/* Header Card */}
