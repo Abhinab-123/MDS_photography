@@ -50,13 +50,13 @@ export default function Navbar() {
         scrolled ? "bg-white/90 backdrop-blur-md border-b border-gray-100 py-3 shadow-sm" : "bg-white/50 backdrop-blur-sm py-4"
       )}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="container mx-auto px-3 sm:px-6 flex items-center justify-between">
         <div 
-          className="flex items-center gap-2 cursor-pointer py-2 px-3 rounded-xl hover:bg-white/30 transition-colors" 
+          className="flex items-center gap-1 sm:gap-2 cursor-pointer py-1 sm:py-2 px-2 sm:px-3 rounded-xl hover:bg-white/30 transition-colors" 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <img src={logo} alt="MDS Logo" className="h-20 md:h-24 w-auto object-contain drop-shadow-lg" />
-          <span className="font-heading font-black text-3xl tracking-tighter hidden sm:block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">MDS</span>
+          <img src={logo} alt="MDS Logo" className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain drop-shadow-lg" />
+          <span className="font-heading font-black text-xl sm:text-3xl tracking-tighter hidden sm:block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">MDS</span>
         </div>
 
         {/* Desktop Nav */}
@@ -85,30 +85,30 @@ export default function Navbar() {
 
         {/* Mobile Nav Toggle */}
         <button className="lg:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
         </button>
       </div>
 
       {/* Mobile Nav Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white border-b border-gray-100 p-6 lg:hidden flex flex-col gap-4 shadow-xl animate-in slide-in-from-top-5">
+        <div className="absolute top-full left-0 right-0 bg-white border-b border-gray-100 p-4 sm:p-6 lg:hidden flex flex-col gap-3 sm:gap-4 shadow-xl animate-in slide-in-from-top-5">
           {navLinks.map((link) => (
             <button
               key={link.name}
               onClick={() => scrollTo(link.id)}
-              className="text-left text-lg font-medium py-3 border-b border-gray-50 last:border-0 hover:text-purple-600 transition-colors"
+              className="text-left text-base sm:text-lg font-medium py-2 sm:py-3 border-b border-gray-50 last:border-0 hover:text-purple-600 transition-colors"
             >
               {link.name}
             </button>
           ))}
           
-          <div className="py-4 flex justify-center border-b border-gray-50">
+          <div className="py-3 sm:py-4 flex justify-center border-b border-gray-50">
             <SocialLinks />
           </div>
 
           <button 
             onClick={() => scrollTo("contact")}
-            className="bg-black text-white px-6 py-4 text-center text-sm font-bold hover:bg-gray-800 transition-colors mt-2 rounded-xl uppercase tracking-widest"
+            className="bg-black text-white px-4 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-sm font-bold hover:bg-gray-800 transition-colors mt-2 rounded-xl uppercase tracking-widest"
           >
             Book Now
           </button>
