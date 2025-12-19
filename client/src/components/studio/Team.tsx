@@ -8,27 +8,23 @@ import img6 from "@assets/cb522f27-8e12-4291-8bb6-dbda831732ee_1766154070294.jpg
 import img7 from "@assets/ab141f0d-648f-4961-b6db-995e88fc3e80_1766154122793.jpg";
 import img8 from "@assets/00cfcafc-7ba9-4fb3-a3a4-f882adcb70c6_1766154162754.jpg";
 import img9 from "@assets/e0d94f18-ebf2-4228-b761-5d584e51adce_1766154274190.jpg";
-import img10 from "@assets/8cb57c82-3e21-4c13-98e9-23fbc539b4e0_1766154335761.jpg";
-import img11 from "@assets/62b9db5e-7eb2-4bfc-8a31-fc54c6ddbde8_1766154565463.jpg";
-import img12 from "@assets/3b2d35f8-ab73-4106-9c45-7e3a3b70ba4c_1766154599022.jpg";
-import img13 from "@assets/55198e15-6bd9-4a8b-82ee-ea63ff04e4c9_1766154635403.jpg";
-import img14 from "@assets/8f6274bb-215f-4738-9fb7-980b6f3d6f6e_1766154660482.jpg";
+import img10New from "@assets/image_1766155390379.png";
+import img11New from "@assets/image_1766155387064.png";
+import img12 from "@assets/55198e15-6bd9-4a8b-82ee-ea63ff04e4c9_1766154635403.jpg";
+import img13 from "@assets/8f6274bb-215f-4738-9fb7-980b6f3d6f6e_1766154660482.jpg";
 import imgBiswaketan from "@assets/litu_1766155068841.jpg";
 
-const leadership = [
-  {
-    name: "Biswaketan Sahoo",
-    profession: "Proprietor",
-    image: imgBiswaketan,
-    featured: true
-  },
-  {
-    name: "Jaganath Sahoo",
-    profession: "Managing Director",
-    image: img8,
-    featured: false
-  }
-];
+const proprietor = {
+  name: "Biswaketan Sahoo",
+  profession: "Proprietor",
+  image: imgBiswaketan
+};
+
+const managingDirector = {
+  name: "Jaganath Sahoo",
+  profession: "Managing Director",
+  image: img8
+};
 
 const teamMembers = [
   { name: "Prasant ku. Sahoo", profession: "Editor, Cinematographer", image: img1 },
@@ -39,11 +35,10 @@ const teamMembers = [
   { name: "Mukesh das", profession: "Cinematographer", image: img6 },
   { name: "Lingaraj behera", profession: "Cinematographer", image: img7 },
   { name: "Debi prasad sinha", profession: "Cinematographer", image: img9 },
-  { name: "Abhijit sahoo", profession: "Designer, Cinematographer", image: img10 },
-  { name: "Debendra sahoo", profession: "Cinematographer", image: img11 },
+  { name: "Abhijit sahoo", profession: "Designer, Cinematographer", image: img10New },
+  { name: "Debendra sahoo", profession: "Cinematographer", image: img11New },
   { name: "Anil kumar", profession: "Editor, Cinematographer", image: img12 },
   { name: "Mr. Papi", profession: "Cinematographer", image: img13 },
-  { name: "Dipak kumar", profession: "Cinematographer", image: img14 },
 ];
 
 export default function Team() {
@@ -61,48 +56,26 @@ export default function Team() {
           </p>
         </div>
 
-        {/* Leadership Section */}
+        {/* Proprietor Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-20 flex justify-center"
         >
-          <div className="bg-gradient-to-r from-amber-100 to-orange-100 rounded-3xl p-8 md:p-12 border-2 border-amber-300 shadow-lg">
-            {/* Proprietor - Featured */}
-            <div className="text-center mb-12">
-              <div className="max-w-sm mx-auto">
-                <div className="bg-gradient-to-br from-amber-50 to-white rounded-2xl shadow-xl p-8">
-                  <div className="relative overflow-hidden rounded-xl shadow-md aspect-square w-40 h-40 mx-auto mb-6">
-                    <img
-                      src={leadership[0].image}
-                      alt={leadership[0].name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <p className="text-sm text-amber-700 uppercase tracking-widest font-bold mb-2">{leadership[0].profession}</p>
-                    <h3 className="text-2xl font-heading font-bold text-stone-900">{leadership[0].name}</h3>
-                  </div>
+          <div className="max-w-sm w-full">
+            <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-3xl p-8 border-2 border-amber-300 shadow-xl">
+              <div className="bg-gradient-to-br from-white to-amber-50 rounded-2xl p-8">
+                <div className="relative overflow-hidden rounded-xl shadow-md aspect-square w-48 h-48 mx-auto mb-6">
+                  <img
+                    src={proprietor.image}
+                    alt={proprietor.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </div>
-            </div>
-
-            {/* Managing Director */}
-            <div className="flex justify-center mb-4">
-              <div className="max-w-xs">
-                <div className="bg-white rounded-xl shadow-lg p-6">
-                  <div className="relative overflow-hidden rounded-lg shadow-md aspect-square w-32 h-32 mx-auto mb-4">
-                    <img
-                      src={leadership[1].image}
-                      alt={leadership[1].name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <p className="text-xs text-amber-600 uppercase tracking-widest font-bold mb-1">{leadership[1].profession}</p>
-                    <h4 className="text-base font-heading font-bold text-stone-900">{leadership[1].name}</h4>
-                  </div>
+                <div className="text-center">
+                  <p className="text-sm text-amber-700 uppercase tracking-widest font-bold mb-2">{proprietor.profession}</p>
+                  <h3 className="text-2xl font-heading font-bold text-stone-900">{proprietor.name}</h3>
                 </div>
               </div>
             </div>
@@ -111,7 +84,7 @@ export default function Team() {
 
         {/* Team Members Grid */}
         <h3 className="text-2xl font-heading font-bold text-center text-stone-900 mb-12">Creative Team</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mb-20">
           {teamMembers.map((member, idx) => (
             <motion.div
               key={member.name}
@@ -144,8 +117,34 @@ export default function Team() {
           ))}
         </div>
 
+        {/* Managing Director Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-20 flex justify-center"
+        >
+          <div className="max-w-sm w-full">
+            <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8 border-2 border-purple-300 shadow-xl">
+              <div className="bg-gradient-to-br from-white to-purple-50 rounded-2xl p-8">
+                <div className="relative overflow-hidden rounded-xl shadow-md aspect-square w-48 h-48 mx-auto mb-6">
+                  <img
+                    src={managingDirector.image}
+                    alt={managingDirector.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="text-center">
+                  <p className="text-sm text-purple-700 uppercase tracking-widest font-bold mb-2">{managingDirector.profession}</p>
+                  <h3 className="text-2xl font-heading font-bold text-stone-900">{managingDirector.name}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* CTA Section */}
-        <div className="mt-20 p-8 md:p-10 rounded-3xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 text-center">
+        <div className="p-8 md:p-10 rounded-3xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 text-center">
           <h3 className="text-2xl font-heading font-bold text-stone-900 mb-4">Join Our Creative Family</h3>
           <p className="text-gray-600 max-w-2xl mx-auto mb-6">
             We're always looking for talented professionals to join our growing team. If you share our passion for excellence, reach out to us.
