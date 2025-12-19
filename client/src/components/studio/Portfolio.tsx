@@ -19,7 +19,7 @@ export default function Portfolio() {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">Selected Work</h2>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">Our Work</h2>
             <div className="h-1 w-20 bg-amber-500" />
           </div>
           <p className="text-gray-500 max-w-sm text-sm md:text-right hidden md:block">
