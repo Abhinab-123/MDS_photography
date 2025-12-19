@@ -16,7 +16,7 @@ export default function Contact() {
             </div>
 
             <div className="space-y-6">
-              <a href="#" className="flex items-center gap-6 p-4 rounded-2xl hover:bg-white hover:shadow-lg transition-all group">
+              <a href="https://www.google.com/maps/place/20%C2%B022'09.2%22N+86%C2%B005'46.8%22E/@20.3692111,86.0955836,19z/data=!4m4!3m3!8m2!3d20.36923!4d86.09634?hl=en&entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center gap-6 p-4 rounded-2xl hover:bg-white hover:shadow-lg transition-all group">
                 <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors">
                   <MapPin className="w-5 h-5" />
                 </div>
@@ -50,14 +50,11 @@ export default function Contact() {
             <div className="pt-8">
               <h4 className="font-bold uppercase tracking-wide text-sm mb-4 text-gray-400">Follow Our Journey</h4>
               <div className="flex gap-4">
-                <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg hover:scale-110 hover:text-pink-600 transition-all">
+                <a href="https://www.instagram.com/mds_photography_8917?igsh=MXB2d2E0c3l4aDlwbw==" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg hover:scale-110 hover:text-pink-600 transition-all">
                   <Instagram className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg hover:scale-110 hover:text-blue-600 transition-all">
+                <a href="https://www.facebook.com/share/1Jb3JbxR3w/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg hover:scale-110 hover:text-blue-600 transition-all">
                   <Facebook className="w-5 h-5" />
-                </a>
-                <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg hover:scale-110 hover:text-red-600 transition-all">
-                  <Youtube className="w-5 h-5" />
                 </a>
               </div>
             </div>
@@ -99,10 +96,10 @@ export default function Contact() {
                 <textarea rows={3} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all resize-none" placeholder="Tell us about your event..." />
               </div>
 
-              <button className="w-full bg-black text-white py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-gray-800 transition-all hover:shadow-lg flex items-center justify-center gap-2 group mt-2">
+              <a href="https://wa.me/918917328397?text=Hi%20I%20want%20to%20send%20a%20request%20for%20your%20services" target="_blank" rel="noopener noreferrer" className="w-full bg-black text-white py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-gray-800 transition-all hover:shadow-lg flex items-center justify-center gap-2 group mt-2">
                 Send Request
                 <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </button>
+              </a>
             </form>
           </div>
         </div>

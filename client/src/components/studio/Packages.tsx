@@ -144,12 +144,12 @@ export default function Packages() {
 
                 <p className="text-xs text-center text-gray-400 mb-6 italic">{pkg.note}</p>
 
-                <button className={cn(
-                  "w-full py-4 rounded-xl text-white font-bold uppercase tracking-widest text-sm shadow-lg transition-all active:scale-95",
+                <a href={`https://wa.me/918917328397?text=Hi%20I%20want%20to%20book%20the%20${pkg.name.toLowerCase()}%20package`} target="_blank" rel="noopener noreferrer" className={cn(
+                  "w-full py-4 rounded-xl text-white font-bold uppercase tracking-widest text-sm shadow-lg transition-all active:scale-95 inline-flex items-center justify-center",
                   pkg.button
                 )}>
                   Book Package
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}

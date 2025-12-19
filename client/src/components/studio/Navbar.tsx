@@ -34,14 +34,11 @@ export default function Navbar() {
 
   const SocialLinks = ({ className }: { className?: string }) => (
     <div className={cn("flex items-center gap-4", className)}>
-      <a href="#" className="text-gray-600 hover:text-pink-600 transition-colors">
+      <a href="https://www.instagram.com/mds_photography_8917?igsh=MXB2d2E0c3l4aDlwbw==" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-600 transition-colors">
         <Instagram className="w-5 h-5" />
       </a>
-      <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+      <a href="https://www.facebook.com/share/1Jb3JbxR3w/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
         <Facebook className="w-5 h-5" />
-      </a>
-      <a href="#" className="text-gray-600 hover:text-red-600 transition-colors">
-        <Youtube className="w-5 h-5" />
       </a>
     </div>
   );

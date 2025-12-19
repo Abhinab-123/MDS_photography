@@ -122,7 +122,7 @@ export default function Team() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20 flex justify-center"
+          className="flex justify-center"
         >
           <div className="max-w-sm w-full">
             <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8 border-2 border-purple-300 shadow-xl">
@@ -142,17 +142,6 @@ export default function Team() {
             </div>
           </div>
         </motion.div>
-
-        {/* CTA Section */}
-        <div className="p-8 md:p-10 rounded-3xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 text-center">
-          <h3 className="text-2xl font-heading font-bold text-stone-900 mb-4">Join Our Creative Family</h3>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-6">
-            We're always looking for talented professionals to join our growing team. If you share our passion for excellence, reach out to us.
-          </p>
-          <button className="px-8 py-3 bg-amber-600 text-white font-bold uppercase tracking-widest rounded-full hover:bg-amber-700 transition-colors shadow-lg">
-            Get In Touch
-          </button>
-        </div>
       </div>
     </section>
   );
