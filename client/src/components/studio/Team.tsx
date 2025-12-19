@@ -9,6 +9,20 @@ import img7 from "@assets/ab141f0d-648f-4961-b6db-995e88fc3e80_1766154122793.jpg
 import img8 from "@assets/00cfcafc-7ba9-4fb3-a3a4-f882adcb70c6_1766154162754.jpg";
 import img9 from "@assets/e0d94f18-ebf2-4228-b761-5d584e51adce_1766154274190.jpg";
 import img10 from "@assets/8cb57c82-3e21-4c13-98e9-23fbc539b4e0_1766154335761.jpg";
+import img11 from "@assets/62b9db5e-7eb2-4bfc-8a31-fc54c6ddbde8_1766154565463.jpg";
+import img12 from "@assets/3b2d35f8-ab73-4106-9c45-7e3a3b70ba4c_1766154599022.jpg";
+import img13 from "@assets/55198e15-6bd9-4a8b-82ee-ea63ff04e4c9_1766154635403.jpg";
+import img14 from "@assets/8f6274bb-215f-4738-9fb7-980b6f3d6f6e_1766154660482.jpg";
+
+const leadership = {
+  name: "Biswaketan Sahoo",
+  role: "Founder & Creative Director",
+  deputy: {
+    name: "Jaganath Sahoo",
+    profession: "Managing Director",
+    image: img8
+  }
+};
 
 const teamMembers = [
   { name: "Prasant ku. Sahoo", profession: "Editor, Cinematographer", image: img1 },
@@ -18,9 +32,12 @@ const teamMembers = [
   { name: "Jyoti ranjan tripathy", profession: "Designer, Cinematographer", image: img5 },
   { name: "Mukesh das", profession: "Cinematographer", image: img6 },
   { name: "Lingaraj behera", profession: "Cinematographer", image: img7 },
-  { name: "Jaganath sahoo", profession: "Managing Director", image: img8 },
   { name: "Debi prasad sinha", profession: "Cinematographer", image: img9 },
   { name: "Abhijit sahoo", profession: "Designer, Cinematographer", image: img10 },
+  { name: "Debendra sahoo", profession: "Cinematographer", image: img11 },
+  { name: "Anil kumar", profession: "Editor, Cinematographer", image: img12 },
+  { name: "Mr. Papi", profession: "Cinematographer", image: img13 },
+  { name: "Dipak kumar", profession: "Cinematographer", image: img14 },
 ];
 
 export default function Team() {
@@ -38,6 +55,42 @@ export default function Team() {
           </p>
         </div>
 
+        {/* Leadership Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <div className="bg-gradient-to-r from-amber-100 to-orange-100 rounded-3xl p-8 md:p-12 border-2 border-amber-300 shadow-lg">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-heading font-bold text-stone-900 mb-2">{leadership.name}</h3>
+              <p className="text-amber-700 font-bold uppercase tracking-widest text-sm">{leadership.role}</p>
+            </div>
+
+            <div className="max-w-md mx-auto">
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden p-6">
+                <div className="flex flex-col items-center">
+                  <div className="relative overflow-hidden rounded-xl shadow-md aspect-square w-48 h-48 mb-6">
+                    <img
+                      src={leadership.deputy.image}
+                      alt={leadership.deputy.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <p className="text-sm text-gray-400 uppercase tracking-widest font-bold mb-2">Managing Director</p>
+                    <h4 className="text-2xl font-heading font-bold text-stone-900">{leadership.deputy.name}</h4>
+                    <p className="text-amber-600 font-bold uppercase tracking-widest text-xs mt-2">{leadership.deputy.profession}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Team Members Grid */}
+        <h3 className="text-2xl font-heading font-bold text-center text-stone-900 mb-12">Creative Team</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {teamMembers.map((member, idx) => (
             <motion.div
@@ -54,8 +107,8 @@ export default function Team() {
                   alt={member.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <p className="text-white text-xs font-bold uppercase tracking-widest">{member.profession}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p className="text-white text-xs font-bold uppercase tracking-widest text-center w-full">{member.profession}</p>
                 </div>
               </div>
               <div className="text-center">
@@ -70,12 +123,13 @@ export default function Team() {
           ))}
         </div>
 
-        <div className="mt-16 p-8 md:p-10 rounded-3xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 text-center">
+        {/* CTA Section */}
+        <div className="mt-20 p-8 md:p-10 rounded-3xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 text-center">
           <h3 className="text-2xl font-heading font-bold text-stone-900 mb-4">Join Our Creative Family</h3>
           <p className="text-gray-600 max-w-2xl mx-auto mb-6">
             We're always looking for talented professionals to join our growing team. If you share our passion for excellence, reach out to us.
           </p>
-          <button className="px-8 py-3 bg-amber-600 text-white font-bold uppercase tracking-widest rounded-full hover:bg-amber-700 transition-colors">
+          <button className="px-8 py-3 bg-amber-600 text-white font-bold uppercase tracking-widest rounded-full hover:bg-amber-700 transition-colors shadow-lg">
             Get In Touch
           </button>
         </div>
