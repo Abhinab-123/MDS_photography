@@ -1,7 +1,26 @@
 import { motion } from "framer-motion";
 import { Instagram, Facebook, Youtube, MapPin, Mail, Phone, ArrowRight, Send } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    service: "Wedding Photography",
+    message: ""
+  });
+
+  const handleFormChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSendRequest = () => {
+    const messageText = `Hello! I would like to send a request:%0A%0AName: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0AService: ${formData.service}%0AMessage: ${formData.message}`;
+    window.open(`https://wa.me/918917328397?text=${messageText}`, "_blank");
+  };
+
   return (
     <section id="contact" className="py-24 px-6 bg-gradient-to-b from-white to-purple-50">
       <div className="container mx-auto max-w-6xl">
@@ -22,7 +41,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">Visit Studio</h4>
-                  <p className="text-gray-500">Main Street, City Center, Odisha</p>
+                  <p className="text-gray-500">Nanpur, Odisha</p>
                 </div>
               </a>
 
@@ -68,22 +87,22 @@ export default function Contact() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wide text-gray-500">First Name</label>
-                  <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all" placeholder="John" />
+                  <input type="text" name="firstName" value={formData.firstName} onChange={handleFormChange} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all" placeholder="John" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wide text-gray-500">Last Name</label>
-                  <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all" placeholder="Doe" />
+                  <input type="text" name="lastName" value={formData.lastName} onChange={handleFormChange} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all" placeholder="Doe" />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wide text-gray-500">Email Address</label>
-                <input type="email" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all" placeholder="john@example.com" />
+                <input type="email" name="email" value={formData.email} onChange={handleFormChange} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all" placeholder="john@example.com" />
               </div>
 
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wide text-gray-500">Service Needed</label>
-                <select className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all appearance-none cursor-pointer">
+                <select name="service" value={formData.service} onChange={handleFormChange} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all appearance-none cursor-pointer">
                   <option>Wedding Photography</option>
                   <option>Portrait Session</option>
                   <option>Event Coverage</option>
@@ -93,13 +112,13 @@ export default function Contact() {
               
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wide text-gray-500">Message</label>
-                <textarea rows={3} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all resize-none" placeholder="Tell us about your event..." />
+                <textarea name="message" rows={3} value={formData.message} onChange={handleFormChange} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all resize-none" placeholder="Tell us about your event..." />
               </div>
 
-              <a href="https://wa.me/918917328397?text=Hi%20I%20want%20to%20send%20a%20request%20for%20your%20services" target="_blank" rel="noopener noreferrer" className="w-full bg-black text-white py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-gray-800 transition-all hover:shadow-lg flex items-center justify-center gap-2 group mt-2">
+              <button onClick={handleSendRequest} className="w-full bg-black text-white py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-gray-800 transition-all hover:shadow-lg flex items-center justify-center gap-2 group mt-2">
                 Send Request
                 <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </a>
+              </button>
             </form>
           </div>
         </div>

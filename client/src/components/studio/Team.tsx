@@ -56,26 +56,44 @@ export default function Team() {
           </p>
         </div>
 
-        {/* Proprietor Section */}
+        {/* Proprietor Section with Managing Director */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-20 flex justify-center"
         >
-          <div className="max-w-sm w-full">
+          <div className="max-w-2xl w-full">
             <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-3xl p-8 border-2 border-amber-300 shadow-xl">
-              <div className="bg-gradient-to-br from-white to-amber-50 rounded-2xl p-8">
-                <div className="relative overflow-hidden rounded-xl shadow-md aspect-square w-48 h-48 mx-auto mb-6">
-                  <img
-                    src={proprietor.image}
-                    alt={proprietor.name}
-                    className="w-full h-full object-cover"
-                  />
+              <div className="space-y-8">
+                {/* Proprietor */}
+                <div className="bg-gradient-to-br from-white to-amber-50 rounded-2xl p-8">
+                  <div className="relative overflow-hidden rounded-xl shadow-md aspect-square w-48 h-48 mx-auto mb-6">
+                    <img
+                      src={proprietor.image}
+                      alt={proprietor.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <p className="text-sm text-amber-700 uppercase tracking-widest font-bold mb-2">{proprietor.profession}</p>
+                    <h3 className="text-2xl font-heading font-bold text-stone-900">{proprietor.name}</h3>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <p className="text-sm text-amber-700 uppercase tracking-widest font-bold mb-2">{proprietor.profession}</p>
-                  <h3 className="text-2xl font-heading font-bold text-stone-900">{proprietor.name}</h3>
+
+                {/* Managing Director */}
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-200">
+                  <div className="relative overflow-hidden rounded-xl shadow-md aspect-square w-48 h-48 mx-auto mb-6">
+                    <img
+                      src={managingDirector.image}
+                      alt={managingDirector.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <p className="text-sm text-purple-700 uppercase tracking-widest font-bold mb-2">{managingDirector.profession}</p>
+                    <h3 className="text-2xl font-heading font-bold text-stone-900">{managingDirector.name}</h3>
+                  </div>
                 </div>
               </div>
             </div>
@@ -117,31 +135,6 @@ export default function Team() {
           ))}
         </div>
 
-        {/* Managing Director Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex justify-center"
-        >
-          <div className="max-w-sm w-full">
-            <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8 border-2 border-purple-300 shadow-xl">
-              <div className="bg-gradient-to-br from-white to-purple-50 rounded-2xl p-8">
-                <div className="relative overflow-hidden rounded-xl shadow-md aspect-square w-48 h-48 mx-auto mb-6">
-                  <img
-                    src={managingDirector.image}
-                    alt={managingDirector.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="text-center">
-                  <p className="text-sm text-purple-700 uppercase tracking-widest font-bold mb-2">{managingDirector.profession}</p>
-                  <h3 className="text-2xl font-heading font-bold text-stone-900">{managingDirector.name}</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

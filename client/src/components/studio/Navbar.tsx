@@ -52,11 +52,11 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <div 
-          className="flex items-center gap-3 cursor-pointer" 
+          className="flex items-center gap-2 cursor-pointer py-2 px-3 rounded-xl hover:bg-white/30 transition-colors" 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <img src={logo} alt="MDS Logo" className="h-16 md:h-20 w-auto object-contain drop-shadow-sm" />
-          <span className="font-heading font-black text-2xl tracking-tighter hidden sm:block">MDS</span>
+          <img src={logo} alt="MDS Logo" className="h-20 md:h-24 w-auto object-contain drop-shadow-lg" />
+          <span className="font-heading font-black text-3xl tracking-tighter hidden sm:block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">MDS</span>
         </div>
 
         {/* Desktop Nav */}
