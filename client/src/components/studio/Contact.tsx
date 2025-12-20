@@ -7,6 +7,7 @@ export default function Contact() {
     firstName: "",
     lastName: "",
     email: "",
+    phone: "",
     service: "Wedding Photography",
     message: ""
   });
@@ -17,7 +18,7 @@ export default function Contact() {
   };
 
   const handleSendRequest = () => {
-    const messageText = `Hello! I would like to send a request:%0A%0AName: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0AService: ${formData.service}%0AMessage: ${formData.message}`;
+    const messageText = `Hello! I would like to send a request:%0A%0AName: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AService: ${formData.service}%0AMessage: ${formData.message}`;
     window.open(`https://wa.me/918917328397?text=${messageText}`, "_blank");
   };
 
@@ -98,6 +99,11 @@ export default function Contact() {
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wide text-gray-500">Email Address</label>
                 <input type="email" name="email" value={formData.email} onChange={handleFormChange} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all" placeholder="john@example.com" />
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-xs font-bold uppercase tracking-wide text-gray-500">Phone Number</label>
+                <input type="tel" name="phone" value={formData.phone} onChange={handleFormChange} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all" placeholder="+91 XXXXX XXXXX" />
               </div>
 
               <div className="space-y-2">

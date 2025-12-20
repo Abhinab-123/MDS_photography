@@ -41,8 +41,8 @@ const services = [
 ];
 
 export default function Services() {
-  const handleBookConsultation = () => {
-    const message = "Hi! I would like to book a consultation for your photography services.";
+  const handleBookConsultation = (serviceName: string) => {
+    const message = `Hi! I would like to book a consultation for: ${serviceName}`;
     window.open(`https://wa.me/918917328397?text=${encodeURIComponent(message)}`, "_blank");
   };
 
@@ -90,7 +90,7 @@ export default function Services() {
                 </ul>
               </div>
 
-              <button onClick={handleBookConsultation} className="w-full py-4 rounded-xl border border-stone-200 text-stone-900 font-bold uppercase tracking-widest text-xs hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all" data-testid="button-book-consultation">
+              <button onClick={() => handleBookConsultation(service.title)} className="w-full py-4 rounded-xl border border-stone-200 text-stone-900 font-bold uppercase tracking-widest text-xs hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all" data-testid="button-book-consultation">
                 Book Consultation
               </button>
             </motion.div>
