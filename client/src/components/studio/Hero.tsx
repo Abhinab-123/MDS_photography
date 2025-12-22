@@ -1,12 +1,24 @@
 import { motion } from "framer-motion";
+import backgroundImage from "@assets/image_1766421317488.png";
 
 export default function Hero() {
   return (
-    <section className="min-h-[90vh] flex items-center justify-center pt-20 px-6 relative overflow-hidden bg-white">
-      {/* Background Blobs - Warm Indian Wedding Aesthetic */}
-      <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-yellow-100 rounded-full blur-[100px] opacity-40 animate-pulse" />
-      <div className="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-amber-100 rounded-full blur-[100px] opacity-35 animate-pulse delay-700" />
-      <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] bg-orange-50 rounded-full blur-[100px] opacity-30 animate-pulse delay-1000" />
+    <section 
+      className="min-h-[90vh] flex items-center justify-center pt-20 px-6 relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      {/* Dark Overlay for Text Readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60" />
+      
+      {/* Vignette Effect */}
+      <div className="absolute inset-0 bg-radial-gradient-to-edge from-transparent via-transparent to-black/30" style={{
+        backgroundImage: 'radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.3) 100%)'
+      }} />
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div 
@@ -24,25 +36,27 @@ export default function Hero() {
             Mahalaxmi Digital Studio
           </motion.div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-wide leading-[0.95]" style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 700, letterSpacing: '0.05em' }}>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-yellow-600 to-amber-600">CAPTURE</span> <br />
-            <span style={{ color: '#8B7355' }}>THE MAGIC</span>
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-wide leading-[0.95]" style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 700, letterSpacing: '0.05em', color: '#F5E6D3', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>
+            <span style={{ background: 'linear-gradient(135deg, #F4D03F 0%, #D4AF37 50%, #F4D03F 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))' }}>CAPTURE</span> <br />
+            <span style={{ color: '#F5E6D3', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>THE MAGIC</span>
           </h1>
           
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed font-medium">
+          <p className="max-w-2xl mx-auto text-lg md:text-xl leading-relaxed font-medium" style={{ color: '#E8DCC8', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
             We turn fleeting moments into vibrant, colorful memories. Experience photography that speaks the language of emotion.
           </p>
           
           <div className="pt-8 flex flex-col md:flex-row items-center justify-center gap-4">
             <button 
               onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 bg-black text-white rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-lg shadow-purple-500/20"
+              className="px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-lg"
+              style={{ backgroundColor: '#D4AF37', color: '#1a1a1a', textShadow: '0 1px 3px rgba(0,0,0,0.1)' }}
             >
               View Packages
             </button>
             <button 
               onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 bg-white text-black border-2 border-black rounded-full font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-colors"
+              className="px-8 py-4 border-2 rounded-full font-bold uppercase tracking-widest hover:bg-white/20 transition-colors backdrop-blur-sm"
+              style={{ borderColor: '#F5E6D3', color: '#F5E6D3', textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
             >
               See Our Work
             </button>
