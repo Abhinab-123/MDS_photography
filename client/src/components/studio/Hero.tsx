@@ -25,8 +25,8 @@ export default function Hero() {
           </motion.div>
           
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-heading font-black tracking-tighter leading-[0.9]">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500">CAPTURE</span> <br />
-            <span className="text-black">THE MAGIC</span>
+            <span className="text-transparent bg-clip-text bg-[url('/font-bg.png')] bg-cover bg-center">CAPTURE</span> <br />
+            <span className="text-transparent bg-clip-text bg-[url('/font-bg.png')] bg-cover bg-center">THE MAGIC</span>
           </h1>
           
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed font-medium">
