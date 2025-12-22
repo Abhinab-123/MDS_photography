@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="min-h-[90vh] flex items-center justify-center pt-20 px-6 relative overflow-hidden bg-white">
-      {/* Background Blobs */}
-      <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple-200 rounded-full blur-[100px] opacity-50 animate-pulse" />
-      <div className="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-pink-200 rounded-full blur-[100px] opacity-50 animate-pulse delay-700" />
-      <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] bg-cyan-200 rounded-full blur-[100px] opacity-40 animate-pulse delay-1000" />
+      {/* Background Blobs - Warm Indian Wedding Aesthetic */}
+      <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-yellow-100 rounded-full blur-[100px] opacity-40 animate-pulse" />
+      <div className="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-amber-100 rounded-full blur-[100px] opacity-35 animate-pulse delay-700" />
+      <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] bg-orange-50 rounded-full blur-[100px] opacity-30 animate-pulse delay-1000" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div 
@@ -24,9 +24,9 @@ export default function Hero() {
             Mahalaxmi Digital Studio
           </motion.div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-heading font-black tracking-tighter leading-[0.9]">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500">CAPTURE</span> <br />
-            <span className="text-black">THE MAGIC</span>
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-wide leading-[0.95]" style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 700, letterSpacing: '0.05em' }}>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-yellow-600 to-amber-600">CAPTURE</span> <br />
+            <span style={{ color: '#8B7355' }}>THE MAGIC</span>
           </h1>
           
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed font-medium">
