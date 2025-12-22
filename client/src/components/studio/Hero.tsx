@@ -9,7 +9,8 @@ export default function Hero() {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        backgroundRepeat: 'no-repeat',
+        willChange: 'transform'
       }}
     >
       {/* Dark Overlay for Text Readability */}
