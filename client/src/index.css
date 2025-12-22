@@ -27,7 +27,7 @@
   --radius: 1rem;
   
   --font-sans: "Inter", sans-serif;
-  --font-heading: "Outfit", sans-serif;
+  --font-heading: "Playfair Display", serif;
   
   --gradient-silver: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   --gradient-gold: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
