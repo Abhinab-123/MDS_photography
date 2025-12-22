@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import backgroundImage from "@assets/image_1766421317488.png";
+import backgroundImage from "@assets/image_1766422152307.png";
 
 export default function Hero() {
   return (
