@@ -50,8 +50,8 @@ export default function Team() {
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-stone-900">
             Meet The <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">Experts</span>
           </h2>
-          <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full" />
-          <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
+          <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full shadow-[0_0_10px_rgba(245,158,11,0.5)]" />
+          <p className="mt-6 text-stone-500 max-w-2xl mx-auto font-medium">
             A talented team of cinematographers, editors, and designers dedicated to bringing your vision to life.
           </p>
         </div>

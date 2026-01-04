@@ -54,7 +54,7 @@ export default function Services() {
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-stone-900 mb-6">
             Services We Offer
           </h2>
-          <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full" />
+          <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full shadow-[0_0_10px_rgba(245,158,11,0.5)]" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">

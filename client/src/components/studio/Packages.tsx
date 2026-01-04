@@ -72,23 +72,23 @@ const packages = [
 
 export default function Packages() {
   return (
-    <section id="packages" className="py-24 relative overflow-hidden">
+    <section id="packages" className="py-24 relative overflow-hidden bg-white">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/50 to-white -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-amber-50/30 to-white -z-10" />
       
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <motion.span 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-purple-600 font-bold tracking-widest uppercase text-sm mb-2 block"
+            className="text-amber-600 font-bold tracking-widest uppercase text-sm mb-2 block"
           >
             Pricing Plans
           </motion.span>
-          <h2 className="text-4xl md:text-6xl font-heading font-black mb-6">
-            Choose Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Collection</span>
+          <h2 className="text-4xl md:text-6xl font-heading font-black mb-6 text-stone-900">
+            Choose Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">Collection</span>
           </h2>
-          <p className="max-w-xl mx-auto text-gray-500">
+          <p className="max-w-xl mx-auto text-stone-500 font-medium">
             Transparent pricing with no hidden fees. Select the package that fits your celebration perfectly.
           </p>
         </div>
