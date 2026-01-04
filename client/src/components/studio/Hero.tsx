@@ -4,7 +4,7 @@ import backgroundImage from "@assets/image_1766422238620.png";
 export default function Hero() {
   return (
     <section 
-      className="h-[85vh] sm:h-[90vh] min-h-[500px] sm:min-h-[600px] flex items-center justify-center pt-16 sm:pt-20 px-4 sm:px-6 relative overflow-hidden"
+      className="h-[85vh] sm:h-[90vh] min-h-[500px] sm:min-h-[600px] flex items-center justify-center pt-0 px-4 sm:px-6 relative overflow-hidden mt-0"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
