@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section 
       id="hero"
-      className="h-[calc(85vh-80px)] sm:h-[calc(90vh-100px)] min-h-[500px] sm:min-h-[600px] flex items-center justify-center px-4 sm:px-6 relative overflow-hidden"
+      className="h-[calc(100vh-80px)] sm:h-[calc(100vh-100px)] min-h-[500px] sm:min-h-[600px] flex items-center justify-center px-4 sm:px-6 relative overflow-hidden"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
