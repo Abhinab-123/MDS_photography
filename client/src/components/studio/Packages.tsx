@@ -72,7 +72,7 @@ const packages = [
 
 export default function Packages() {
   return (
-    <section id="packages" className="py-24 relative overflow-hidden bg-white">
+    <section id="packages" className="py-24 relative overflow-hidden bg-white -mt-1">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-amber-50/30 to-white -z-10" />
       
