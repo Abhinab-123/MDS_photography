@@ -35,11 +35,11 @@ export default function Navbar() {
   const SocialLinks = ({ className, scrolled }: { className?: string; scrolled?: boolean }) => (
     <div className={cn("flex items-center gap-4", className)}>
       <a href="https://www.instagram.com/mds_photography_8917?igsh=MXB2d2E0c3l4aDlwbw==" target="_blank" rel="noopener noreferrer" 
-        className={cn("transition-colors duration-200", scrolled ? "text-gray-600 hover:text-amber-600" : "text-white/80 hover:text-white")}>
+        className={cn("transition-colors duration-200", scrolled ? "text-amber-200/70 hover:text-amber-400" : "text-white/80 hover:text-white")}>
         <Instagram className="w-4 h-4" />
       </a>
       <a href="https://www.facebook.com/share/1Jb3JbxR3w/" target="_blank" rel="noopener noreferrer" 
-        className={cn("transition-colors duration-200", scrolled ? "text-gray-600 hover:text-amber-600" : "text-white/80 hover:text-white")}>
+        className={cn("transition-colors duration-200", scrolled ? "text-amber-200/70 hover:text-amber-400" : "text-white/80 hover:text-white")}>
         <Facebook className="w-4 h-4" />
       </a>
     </div>
@@ -49,7 +49,7 @@ export default function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-500",
-        scrolled ? "bg-white/95 backdrop-blur-xl border-b border-gray-100 py-1 shadow-md" : "bg-transparent py-2"
+        scrolled ? "bg-amber-950/90 backdrop-blur-xl border-b border-amber-900/30 py-1 shadow-2xl" : "bg-transparent py-2"
       )}
     >
       <div className="container mx-auto px-3 sm:px-6 flex items-center justify-between">
@@ -69,7 +69,7 @@ export default function Navbar() {
               onClick={() => scrollTo(link.id)}
               className={cn(
                 "text-xs font-bold transition-colors duration-200 uppercase tracking-wide",
-                scrolled ? "text-gray-900 hover:text-amber-600" : "text-white hover:text-amber-400"
+                scrolled ? "text-amber-100/90 hover:text-amber-400" : "text-white hover:text-amber-400"
               )}
             >
               {link.name}
@@ -94,19 +94,19 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Nav Toggle */}
-        <button className={cn("lg:hidden p-2 transition-colors", scrolled ? "text-gray-900" : "text-white")} onClick={() => setIsOpen(!isOpen)}>
+        <button className={cn("lg:hidden p-2 transition-colors", scrolled ? "text-amber-100" : "text-white")} onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
       {/* Mobile Nav Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white border-b border-gray-100 p-4 sm:p-6 lg:hidden flex flex-col gap-3 sm:gap-4 shadow-xl animate-in slide-in-from-top-5 duration-200">
+        <div className="absolute top-full left-0 right-0 bg-amber-950/95 backdrop-blur-xl border-b border-amber-900/30 p-4 sm:p-6 lg:hidden flex flex-col gap-3 sm:gap-4 shadow-2xl animate-in slide-in-from-top-5 duration-200">
           {navLinks.map((link) => (
             <button
               key={link.name}
               onClick={() => scrollTo(link.id)}
-              className="text-left text-base sm:text-lg font-medium py-2 sm:py-3 border-b border-gray-50 last:border-0 text-gray-700 hover:text-amber-700 transition-colors duration-200"
+              className="text-left text-base sm:text-lg font-medium py-2 sm:py-3 border-b border-amber-900/20 last:border-0 text-amber-100/90 hover:text-amber-400 transition-colors duration-200"
             >
               {link.name}
             </button>
