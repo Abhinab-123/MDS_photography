@@ -21,8 +21,8 @@ export default function Hero() {
         backgroundImage: 'radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.3) 100%)'
       }} />
 
-      {/* Bottom Gradient for Smooth Transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-[2]" />
+      {/* No Bottom Gradient/Gap */}
+      <div className="absolute bottom-0 left-0 right-0 h-0 bg-transparent z-[2]" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div 
