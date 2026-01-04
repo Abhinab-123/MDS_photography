@@ -2,27 +2,27 @@
 @import "tw-animate-css";
 
 @theme inline {
-  --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(240 10% 3.9%);
+  --color-background: hsl(40 30% 98%);
+  --color-foreground: hsl(20 10% 10%);
   
-  --color-primary: hsl(262 83% 58%); /* Vivid Purple */
-  --color-primary-foreground: hsl(210 40% 98%);
+  --color-primary: hsl(35 75% 45%); /* Gold/Amber */
+  --color-primary-foreground: hsl(40 30% 98%);
   
-  --color-secondary: hsl(240 4.8% 95.9%);
-  --color-secondary-foreground: hsl(240 5.9% 10%);
+  --color-secondary: hsl(35 25% 90%);
+  --color-secondary-foreground: hsl(35 75% 20%);
   
-  --color-muted: hsl(240 4.8% 95.9%);
-  --color-muted-foreground: hsl(240 3.8% 46.1%);
+  --color-muted: hsl(35 20% 95%);
+  --color-muted-foreground: hsl(35 15% 45%);
   
-  --color-accent: hsl(240 4.8% 95.9%);
-  --color-accent-foreground: hsl(240 5.9% 10%);
+  --color-accent: hsl(35 70% 92%);
+  --color-accent-foreground: hsl(35 75% 25%);
   
   --color-destructive: hsl(0 84.2% 60.2%);
   --color-destructive-foreground: hsl(0 0% 98%);
   
-  --color-border: hsl(240 5.9% 90%);
-  --color-input: hsl(240 5.9% 90%);
-  --color-ring: hsl(262 83% 58%);
+  --color-border: hsl(35 30% 90%);
+  --color-input: hsl(35 30% 90%);
+  --color-ring: hsl(35 75% 45%);
   
   --radius: 1rem;
   
@@ -30,10 +30,10 @@
   --font-heading: "Playfair Display", serif;
   
   --gradient-silver: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  --gradient-gold: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-  --gradient-diamond: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
-  --gradient-hero: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-  --gradient-text: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #B4941F 100%);
+  --gradient-diamond: linear-gradient(135deg, #e5e7eb 0%, #9ca3af 100%);
+  --gradient-hero: linear-gradient(to right, #D4AF37 0%, #B4941F 100%);
+  --gradient-text: linear-gradient(to right, #B45309 0%, #D97706 100%);
 }
 
 @layer base {

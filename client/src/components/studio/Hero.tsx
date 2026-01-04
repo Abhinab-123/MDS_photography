@@ -37,7 +37,7 @@ export default function Hero() {
             Mahalaxmi Digital Studio
           </motion.div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-wide leading-[0.95]" style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 700, letterSpacing: '0.05em', color: '#F5E6D3', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-wide leading-[1.1] md:leading-[1.05]" style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 700, letterSpacing: '0.05em', color: '#F5E6D3', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>
             <span style={{ background: 'linear-gradient(135deg, #F4D03F 0%, #D4AF37 50%, #F4D03F 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))' }}>CAPTURE</span> <br />
             <span style={{ color: '#F5E6D3', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>THE MAGIC</span>
           </h1>

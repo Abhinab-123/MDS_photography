@@ -56,7 +56,7 @@ export default function Navbar() {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <img src={logo} alt="MDS Logo" className="h-12 sm:h-14 w-auto object-contain drop-shadow-lg" loading="eager" />
-          <span className="font-heading font-black text-lg sm:text-2xl tracking-tighter hidden sm:block bg-gradient-to-r from-amber-700 to-yellow-600 bg-clip-text text-transparent">MDS</span>
+          <span className="font-heading font-black text-lg sm:text-2xl tracking-tight hidden sm:block bg-gradient-to-r from-amber-700 to-yellow-600 bg-clip-text text-transparent">MDS</span>
         </div>
 
         {/* Desktop Nav */}
