@@ -47,7 +47,7 @@ export default function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        scrolled ? "bg-white/80 backdrop-blur-xl border-b border-amber-100/50 py-3 shadow-[0_2px_20px_-5px_rgba(212,175,55,0.1)]" : "bg-transparent py-5"
+        scrolled ? "bg-white/80 backdrop-blur-xl border-b border-amber-100/50 py-2 sm:py-3 shadow-[0_2px_20px_-5px_rgba(212,175,55,0.1)]" : "bg-transparent py-4 sm:py-5"
       )}
     >
       <div className="container mx-auto px-3 sm:px-6 flex items-center justify-between">

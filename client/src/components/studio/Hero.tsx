@@ -4,7 +4,7 @@ import backgroundImage from "@assets/image_1766422238620.png";
 export default function Hero() {
   return (
     <section 
-      className="min-h-[90vh] flex items-center justify-center pt-20 px-6 relative overflow-hidden"
+      className="min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center pt-16 sm:pt-20 px-4 sm:px-6 relative overflow-hidden"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -37,26 +37,26 @@ export default function Hero() {
             Mahalaxmi Digital Studio
           </motion.div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-wide leading-[1.1] md:leading-[1.05]" style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 700, letterSpacing: '0.05em', color: '#F5E6D3', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-wide leading-[1.1] md:leading-[1.05]" style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 700, letterSpacing: '0.05em', color: '#F5E6D3', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>
             <span style={{ background: 'linear-gradient(135deg, #F4D03F 0%, #D4AF37 50%, #F4D03F 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))' }}>CAPTURE</span> <br />
             <span style={{ color: '#F5E6D3', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>THE MAGIC</span>
           </h1>
           
-          <p className="max-w-2xl mx-auto text-lg md:text-xl leading-relaxed font-medium" style={{ color: '#E8DCC8', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
+          <p className="max-w-xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed font-medium px-4 sm:px-0" style={{ color: '#E8DCC8', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
             We turn fleeting moments into vibrant, colorful memories. Experience photography that speaks the language of emotion.
           </p>
           
-          <div className="pt-8 flex flex-col md:flex-row items-center justify-center gap-4">
+          <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-6 sm:px-0">
             <button 
               onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-lg"
+              className="w-full sm:w-auto px-8 py-3.5 sm:py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-lg"
               style={{ backgroundColor: '#D4AF37', color: '#1a1a1a', textShadow: '0 1px 3px rgba(0,0,0,0.1)' }}
             >
               View Packages
             </button>
             <button 
               onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 border-2 rounded-full font-bold uppercase tracking-widest hover:bg-white/20 transition-colors backdrop-blur-sm"
+              className="w-full sm:w-auto px-8 py-3.5 sm:py-4 border-2 rounded-full font-bold uppercase tracking-widest hover:bg-white/20 transition-colors backdrop-blur-sm"
               style={{ borderColor: '#F5E6D3', color: '#F5E6D3', textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
             >
               See Our Work
