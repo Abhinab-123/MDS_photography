@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section 
       id="hero"
-      className="h-[85vh] sm:h-[90vh] min-h-[500px] sm:min-h-[600px] flex items-center justify-center pt-24 sm:pt-32 px-4 sm:px-6 relative overflow-hidden mt-0"
+      className="h-[85vh] sm:h-[90vh] min-h-[500px] sm:min-h-[600px] flex items-center justify-center px-4 sm:px-6 relative overflow-hidden"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -22,10 +22,7 @@ export default function Hero() {
         backgroundImage: 'radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.3) 100%)'
       }} />
 
-      {/* No Bottom Gradient/Gap */}
-      <div className="absolute bottom-0 left-0 right-0 h-0 bg-transparent z-[2]" />
-
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="container mx-auto max-w-6xl relative z-10 pt-20 sm:pt-24">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
