@@ -15,7 +15,7 @@ const portfolioItems = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 px-4 md:px-6 bg-white">
+    <section id="portfolio" className="py-20 md:py-24 px-4 md:px-6 bg-white relative z-20">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>

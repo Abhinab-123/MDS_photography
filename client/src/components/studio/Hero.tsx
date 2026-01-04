@@ -4,7 +4,7 @@ import backgroundImage from "@assets/image_1766422238620.png";
 export default function Hero() {
   return (
     <section 
-      className="min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center pt-16 sm:pt-20 px-4 sm:px-6 relative overflow-hidden"
+      className="h-[85vh] sm:h-[90vh] min-h-[500px] sm:min-h-[600px] flex items-center justify-center pt-16 sm:pt-20 px-4 sm:px-6 relative overflow-hidden"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -17,9 +17,12 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60" />
       
       {/* Vignette Effect */}
-      <div className="absolute inset-0 bg-radial-gradient-to-edge from-transparent via-transparent to-black/30" style={{
+      <div className="absolute inset-0 bg-radial-gradient-to-edge from-transparent via-transparent to-black/30 z-[1]" style={{
         backgroundImage: 'radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.3) 100%)'
       }} />
+
+      {/* Bottom Gradient for Smooth Transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-[2]" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div 
