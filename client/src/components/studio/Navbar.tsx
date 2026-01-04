@@ -35,12 +35,12 @@ export default function Navbar() {
   const SocialLinks = ({ className, scrolled }: { className?: string; scrolled?: boolean }) => (
     <div className={cn("flex items-center gap-4", className)}>
       <a href="https://www.instagram.com/mds_photography_8917?igsh=MXB2d2E0c3l4aDlwbw==" target="_blank" rel="noopener noreferrer" 
-        className={cn("transition-colors duration-200", scrolled ? "text-amber-100/80 hover:text-white" : "text-white/80 hover:text-white")}>
-        <Instagram className="w-5 h-5" />
+        className={cn("transition-colors duration-200", scrolled ? "text-gray-600 hover:text-amber-600" : "text-white/80 hover:text-white")}>
+        <Instagram className="w-4 h-4" />
       </a>
       <a href="https://www.facebook.com/share/1Jb3JbxR3w/" target="_blank" rel="noopener noreferrer" 
-        className={cn("transition-colors duration-200", scrolled ? "text-amber-100/80 hover:text-white" : "text-white/80 hover:text-white")}>
-        <Facebook className="w-5 h-5" />
+        className={cn("transition-colors duration-200", scrolled ? "text-gray-600 hover:text-amber-600" : "text-white/80 hover:text-white")}>
+        <Facebook className="w-4 h-4" />
       </a>
     </div>
   );
@@ -49,7 +49,7 @@ export default function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-500",
-        scrolled ? "bg-amber-900/95 backdrop-blur-xl border-b border-amber-800/50 py-2 sm:py-3 shadow-lg" : "bg-black/40 backdrop-blur-md py-4 sm:py-5 border-b border-white/10"
+        scrolled ? "bg-white/95 backdrop-blur-xl border-b border-gray-100 py-1 shadow-md" : "bg-transparent py-2"
       )}
     >
       <div className="container mx-auto px-3 sm:px-6 flex items-center justify-between">
@@ -68,8 +68,8 @@ export default function Navbar() {
               key={link.name}
               onClick={() => scrollTo(link.id)}
               className={cn(
-                "text-sm font-bold transition-colors duration-200 uppercase tracking-wide",
-                scrolled ? "text-amber-50 hover:text-amber-400" : "text-white hover:text-amber-400"
+                "text-xs font-bold transition-colors duration-200 uppercase tracking-wide",
+                scrolled ? "text-gray-900 hover:text-amber-600" : "text-white hover:text-amber-400"
               )}
             >
               {link.name}
@@ -83,9 +83,9 @@ export default function Navbar() {
           <button 
             onClick={() => scrollTo("contact")}
             className={cn(
-              "px-6 py-2.5 text-sm font-bold transition-colors duration-200 rounded-full shadow-lg",
+              "px-5 py-2 text-xs font-bold transition-colors duration-200 rounded-full shadow-md",
               scrolled 
-                ? "bg-black text-white hover:bg-amber-700 hover:shadow-amber-700/20" 
+                ? "bg-amber-600 text-white hover:bg-amber-700" 
                 : "bg-white text-black hover:bg-amber-100"
             )}
           >
@@ -94,8 +94,8 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Nav Toggle */}
-        <button className={cn("lg:hidden p-2 transition-colors", scrolled ? "text-white" : "text-white")} onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
+        <button className={cn("lg:hidden p-2 transition-colors", scrolled ? "text-gray-900" : "text-white")} onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
