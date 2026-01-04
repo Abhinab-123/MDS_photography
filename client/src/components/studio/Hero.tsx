@@ -32,7 +32,7 @@ export default function Hero() {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-block px-4 py-1.5 rounded-full bg-black/5 backdrop-blur-sm border border-black/10 text-sm font-semibold uppercase tracking-wider mb-4"
+            className="inline-block px-4 py-1.5 rounded-full backdrop-blur-md border border-white/20 text-sm font-semibold uppercase tracking-[0.2em] mb-4 text-white shadow-[0_0_15px_rgba(212,175,55,0.3)] bg-gradient-to-r from-amber-500/10 to-transparent"
           >
             Mahalaxmi Digital Studio
           </motion.div>
