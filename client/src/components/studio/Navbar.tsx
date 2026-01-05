@@ -49,16 +49,16 @@ export default function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-500",
-        "bg-slate-950/75 backdrop-blur-xl border-b border-amber-900/30 py-2 shadow-2xl"
+        "bg-slate-950/75 backdrop-blur-xl border-b border-amber-900/30 py-1 shadow-2xl"
       )}
     >
       <div className="container mx-auto px-3 sm:px-6 flex items-center justify-between">
         <div 
-          className="flex items-center gap-1 sm:gap-2 cursor-pointer py-1 sm:py-2 px-2 sm:px-3 rounded-xl hover:bg-white/20 transition-colors" 
+          className="flex items-center gap-1 sm:gap-2 cursor-pointer py-0.5 sm:py-1 px-2 sm:px-3 rounded-xl hover:bg-white/10 transition-colors" 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <img src={logo} alt="MDS Logo" className="h-12 sm:h-14 w-auto object-contain drop-shadow-lg" loading="eager" />
-          <span className="font-heading font-black text-lg sm:text-2xl tracking-tight hidden sm:block bg-gradient-to-r from-amber-700 to-yellow-600 bg-clip-text text-transparent">MDS</span>
+          <img src={logo} alt="MDS Logo" className="h-8 sm:h-10 w-auto object-contain drop-shadow-lg" loading="eager" />
+          <span className="font-heading font-black text-base sm:text-xl tracking-tight hidden sm:block bg-gradient-to-r from-amber-700 to-yellow-600 bg-clip-text text-transparent">MDS</span>
         </div>
 
         {/* Desktop Nav */}
