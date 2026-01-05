@@ -35,11 +35,11 @@ export default function Navbar() {
   const SocialLinks = ({ className, scrolled }: { className?: string; scrolled?: boolean }) => (
     <div className={cn("flex items-center gap-4", className)}>
       <a href="https://www.instagram.com/mds_photography_8917?igsh=MXB2d2E0c3l4aDlwbw==" target="_blank" rel="noopener noreferrer" 
-        className={cn("transition-colors duration-200", "text-slate-300/80 hover:text-amber-400")}>
+        className={cn("transition-colors duration-200", "text-amber-200/70 hover:text-amber-400")}>
         <Instagram className="w-4 h-4" />
       </a>
       <a href="https://www.facebook.com/share/1Jb3JbxR3w/" target="_blank" rel="noopener noreferrer" 
-        className={cn("transition-colors duration-200", "text-slate-300/80 hover:text-amber-400")}>
+        className={cn("transition-colors duration-200", "text-amber-200/70 hover:text-amber-400")}>
         <Facebook className="w-4 h-4" />
       </a>
     </div>
@@ -49,7 +49,7 @@ export default function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-500",
-        "bg-slate-900/95 backdrop-blur-xl border-b border-slate-800/50 shadow-2xl"
+        "bg-slate-950/95 backdrop-blur-xl border-b border-amber-900/30 py-2 shadow-2xl"
       )}
     >
       <div className="container mx-auto px-3 sm:px-6 flex items-center justify-between">
@@ -69,7 +69,7 @@ export default function Navbar() {
               onClick={() => scrollTo(link.id)}
               className={cn(
                 "text-xs font-bold transition-colors duration-200 uppercase tracking-wide",
-                "text-slate-100/90 hover:text-amber-400"
+                "text-amber-100 hover:text-amber-400"
               )}
             >
               {link.name}
@@ -92,7 +92,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Nav Toggle */}
-        <button className={cn("lg:hidden p-2 transition-colors", "text-slate-100")} onClick={() => setIsOpen(!isOpen)}>
+        <button className={cn("lg:hidden p-2 transition-colors", "text-amber-100")} onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
