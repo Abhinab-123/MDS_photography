@@ -43,10 +43,6 @@ export default function Hero() {
             <span style={{ color: '#F5E6D3', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>OUR EXPERTISE</span>
           </h1>
           
-          <p className="max-w-xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed font-medium px-4 sm:px-0" style={{ color: '#E8DCC8', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
-            We turn fleeting moments into vibrant, colorful memories. Experience photography that speaks the language of emotion.
-          </p>
-          
           <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-6 sm:px-0">
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
