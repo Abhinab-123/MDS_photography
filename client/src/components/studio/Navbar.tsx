@@ -49,7 +49,7 @@ export default function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-500",
-        "bg-slate-950/95 backdrop-blur-xl border-b border-amber-900/30 py-2 shadow-2xl"
+        "bg-slate-950/75 backdrop-blur-xl border-b border-amber-900/30 py-2 shadow-2xl"
       )}
     >
       <div className="container mx-auto px-3 sm:px-6 flex items-center justify-between">
@@ -99,7 +99,7 @@ export default function Navbar() {
 
       {/* Mobile Nav Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-xl border-b border-slate-800/30 p-4 sm:p-6 lg:hidden flex flex-col gap-3 sm:gap-4 shadow-2xl animate-in slide-in-from-top-5 duration-200">
+        <div className="absolute top-full left-0 right-0 bg-slate-950/75 backdrop-blur-xl border-b border-amber-900/30 p-4 sm:p-6 lg:hidden flex flex-col gap-3 sm:gap-4 shadow-2xl animate-in slide-in-from-top-5 duration-200">
           {navLinks.map((link) => (
             <button
               key={link.name}
