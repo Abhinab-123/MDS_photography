@@ -49,18 +49,18 @@ export default function Hero() {
           
           <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-6 sm:px-0">
             <button 
-              onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="w-full sm:w-auto px-8 py-3.5 sm:py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-lg"
               style={{ backgroundColor: '#D4AF37', color: '#1a1a1a', textShadow: '0 1px 3px rgba(0,0,0,0.1)' }}
             >
-              View Packages
+              Book Now
             </button>
             <button 
-              onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
               className="w-full sm:w-auto px-8 py-3.5 sm:py-4 border-2 rounded-full font-bold uppercase tracking-widest hover:bg-white/20 transition-colors backdrop-blur-sm"
               style={{ borderColor: '#F5E6D3', color: '#F5E6D3', textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
             >
-              See Our Work
+              View Packages
             </button>
           </div>
         </motion.div>
