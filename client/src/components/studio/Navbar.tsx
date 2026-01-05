@@ -49,7 +49,7 @@ export default function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-500",
-        "bg-slate-900/95 backdrop-blur-xl border-b border-slate-800/50 py-2 shadow-2xl"
+        "bg-slate-900/95 backdrop-blur-xl border-b border-slate-800/50 shadow-2xl"
       )}
     >
       <div className="container mx-auto px-3 sm:px-6 flex items-center justify-between">

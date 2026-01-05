@@ -8,7 +8,7 @@ import Contact from "@/components/studio/Contact";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-black selection:bg-black selection:text-white pt-[80px] sm:pt-[100px]">
+    <div className="min-h-screen bg-white text-black selection:bg-black selection:text-white">
       <Navbar />
       <main>
         <Hero />
