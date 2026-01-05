@@ -39,8 +39,8 @@ export default function Hero() {
           </motion.div>
           
           <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-wide leading-[1.1] md:leading-[1.05]" style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 700, letterSpacing: '0.05em', color: '#F5E6D3', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>
-            <span style={{ background: 'linear-gradient(135deg, #F4D03F 0%, #D4AF37 50%, #F4D03F 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))' }}>CAPTURE</span> <br />
-            <span style={{ color: '#F5E6D3', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>THE MAGIC</span>
+            <span style={{ background: 'linear-gradient(135deg, #F4D03F 0%, #D4AF37 50%, #F4D03F 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))' }}>YOUR VISION</span> <br />
+            <span style={{ color: '#F5E6D3', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>OUR EXPERTISE</span>
           </h1>
           
           <p className="max-w-xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed font-medium px-4 sm:px-0" style={{ color: '#E8DCC8', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
